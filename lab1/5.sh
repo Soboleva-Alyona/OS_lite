@@ -1,6 +1,5 @@
 #!/bin/bash
 
 touch info.log
-awk '{if ($6 == "<info>") print }' /var/log/syslog > info.log
-
+awk '{if ($2 == "INFO") print}' /var/log/anaconda/syslog > info.log
 
