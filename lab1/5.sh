@@ -1,5 +1,5 @@
 #!/bin/bash
 
 touch info.log
-awk '{if ($2 == "INFO") print}' /var/log/anaconda/syslog > info.log
+awk '$2 == "INFO"' /var/log/anaconda/syslog > info.log
 
